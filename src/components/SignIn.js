@@ -71,12 +71,15 @@ export default function SignIn(props) {
           />
 
           <Button
-            type="submit"
+            type="button"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
             disabled={disabled}
+            onClick={()=>{
+              setName(string)
+            }}
           >
             はじめる
           </Button>
