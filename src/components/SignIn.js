@@ -44,7 +44,6 @@ export default function SignIn(props) {
   const {setName} = props;
   const [disabled, setDisabled] = useState(true);
   const [string, setString] = useState('');
-  console.log(string);
 
   useEffect(()=>{
     setDisabled(string ? false : true)
@@ -68,6 +67,12 @@ export default function SignIn(props) {
             name="name"
             autoFocus
             onChange={(e)=>setString(e.target.value)}
+            onKeyDown={(e)=>{
+              if(e.key==="Enter"){
+                setName(e.target.value)
+                e.preventDefault();
+              }
+            }}
           />
 
           <Button
