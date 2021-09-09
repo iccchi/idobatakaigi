@@ -39,9 +39,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignIn() {
+export default function SignIn(props) {
   const classes = useStyles();
-
+  const {setName} = props;
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
