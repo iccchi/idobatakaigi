@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import SignIn from './SignIn';
 import {Main} from './Main'
+import config from '../config.json'
+console.log({config})
 export default () => {
   const [name, setName] = useState('');
   console.log({name});
 
   return(
-    name ? <Main name={name}/> : <SignIn setName={setName}/>
+    name || config.signInEnabled ? <Main name={name}/> : <SignIn setName={setName}/>
   )
 };
