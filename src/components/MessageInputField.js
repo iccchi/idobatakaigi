@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Avatar, Grid} from '@material-ui/core';
 import { garavatarPath } from '../gravatar';
-import {MessageField} from './MessageField'
+import {MessageField} from './MessageField';
+
 const useStyles = makeStyles({
   root:{
     gridRow: 2,
