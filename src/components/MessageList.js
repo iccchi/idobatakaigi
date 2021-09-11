@@ -11,7 +11,7 @@ const useStyles = makeStyles({
 export const MessageList = () => {
   const [messages, setMessages] = useState([])
   const classes = useStyles();
-
+  
   useEffect(()=>{
     messagesRef.orderByKey().limitToLast(3).on('value', (snapshot)=>{
       const messages = snapshot.val()
