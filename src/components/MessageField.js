@@ -15,7 +15,7 @@ export const MessageField = ({name, setText, text, inputEl}) => {
         if(isComposed || e.target.value==='') return;
         if(e.key==="Enter"){
           console.log('push message to firebase')
-          pushMessage({name: 'ichi', text})
+          pushMessage({name , text})
           setText('');
           e.preventDefault();
         }
