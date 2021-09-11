@@ -16,10 +16,8 @@ export const MessageItem = ({name, text, isLastItem}) => {
 
   useEffect(()=>{
     if(isLastItem){
-      ref.current.scrollIntoView({behavior: 'smooth'})
-      console.log('5434')
+      ref.current.scrollIntoView({behavior: 'smooth'})     
     }
-    console.log('1234')
   }, [isLastItem])
 
   return (

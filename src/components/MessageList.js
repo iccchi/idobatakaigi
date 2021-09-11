@@ -17,7 +17,7 @@ export const MessageList = () => {
   const classes = useStyles();
   
   useEffect(()=>{
-    console.log('aaaa')
+    
     messagesRef.orderByKey().limitToLast(15).on('value', (snapshot)=>{
       const messages = snapshot.val()
       if(messages===null)return

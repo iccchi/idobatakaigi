@@ -4,7 +4,7 @@ import { pushMessage } from '../firebase'
 
 export const MessageField = ({name, setText, text, inputEl}) => {
   const [isComposed, setIsComposed] = useState(false)
-  console.log({text})
+ 
   return (
     <TextField
       inputRef={inputEl}
@@ -14,7 +14,7 @@ export const MessageField = ({name, setText, text, inputEl}) => {
       onKeyDown={(e)=>{
         if(isComposed || e.target.value==='') return;
         if(e.key==="Enter"){
-          console.log('push message to firebase')
+          
           pushMessage({name , text})
           setText('');
           e.preventDefault();
